@@ -18,7 +18,7 @@ Resources:
         - DynamoDBCrudPolicy:
             TableName:
               Ref: todoTable
-      Timeout: 10
+      Timeout: 30
       Events:
         root:
           Type: Api

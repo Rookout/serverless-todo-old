@@ -1,5 +1,7 @@
 # serverless-todo
 
+FORKED FROM: https://github.com/evanchiu/serverless-todo
+
 React [TodoMVC](http://todomvc.com/) with a Serverless backend.
 
 It provides a demo integration of [React](https://reactjs.org) + [API Gateway](https://aws.amazon.com/api-gateway/) + [AWS Lambda](https://aws.amazon.com/lambda) + [Node.js](https://nodejs.org/) + [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
