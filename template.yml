@@ -6,6 +6,15 @@ Globals:
     BinaryMediaTypes:
       # The ~1 will be replaced with / when deployed
       - '*~1*'
+Parameters: 
+  RookoutToken: 
+    Type: String
+    Default: ""
+    Description: Rookout Organizational Token
+  RookoutRookTags: 
+    Type: String
+    Default: serverlesstodo
+    Description: Rookout Rook Tags
 Resources:
   siteFunction:
     Type: AWS::Serverless::Function
@@ -40,7 +49,9 @@ Resources:
         Variables:
           TABLE:
             Ref: todoTable
-          ROOKOUT_TOKEN: ${env:ROOKOUT_TOKEN}
-          ROOKOUT_ROOK_TAGS: ${env:ROOKOUT_ROOK_TAGS}-serverlesstodo
+          ROOKOUT_TOKEN:
+            Ref: RookoutToken
+          ROOKOUT_ROOK_TAGS:
+            Ref: RookoutRookTags
   todoTable:
     Type: AWS::Serverless::SimpleTable
