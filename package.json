@@ -7,7 +7,7 @@
     "install-modules": "docker run -it -v `pwd`:`pwd` -w `pwd` node:8 npm install",
     "build": "mkdir -p build && zip -r build/todo.zip src public node_modules",
     "package": "aws cloudformation package --template-file template.yml --output-template-file packaged-template.yml --s3-bucket $S3_BUCKET",
-    "deploy": "aws cloudformation deploy --template-file packaged-template.yml --capabilities CAPABILITY_IAM --stack-name dev-todo-$USER"
+    "deploy": "aws cloudformation deploy --template-file packaged-template.yml --capabilities CAPABILITY_IAM --stack-name serverless-todo-$USER"
   },
   "repository": {
     "type": "git",

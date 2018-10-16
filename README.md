@@ -1,6 +1,6 @@
 # serverless-todo
 
-FORKED FROM: https://github.com/evanchiu/serverless-todo
+Original Application: https://github.com/evanchiu/serverless-todo
 
 React [TodoMVC](http://todomvc.com/) with a Serverless backend.
 
@@ -13,9 +13,10 @@ Prerequisites: [Node.js](https://nodejs.org/en/) and [AWS CLI](http://docs.aws.a
 * Create an [AWS](https://aws.amazon.com/) Account and [IAM User](https://aws.amazon.com/iam/) with the `AdministratorAccess` AWS [Managed Policy](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html)
 * Run `aws configure` to put store that user's credentials in `~/.aws/credentials`
 * Create an S3 bucket for storing the Lambda code and store its name in a shell variable with:
+  * `aws s3 mb s3://<bucket name>`
   * `export S3_BUCKET=<bucket name>`
 * Npm install:
-  * `npm install`
+  * `npm install-modules`
 * Build:
   * `npm run build`
 * Upload package to S3, transform the CloudFormation template:
