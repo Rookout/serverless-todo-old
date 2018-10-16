@@ -13,6 +13,7 @@ Resources:
       Description: React TodoMVC with a Serverless backend
       Handler: src/index.handler
       Runtime: nodejs8.10
+      MemorySize: 1536
       CodeUri: build/todo.zip
       Policies:
         - DynamoDBCrudPolicy:
@@ -39,5 +40,7 @@ Resources:
         Variables:
           TABLE:
             Ref: todoTable
+          ROOKOUT_TOKEN: ${env:ROOKOUT_TOKEN}
+          ROOKOUT_ROOK_TAGS: ${env:ROOKOUT_ROOK_TAGS}-serverlesstodo
   todoTable:
     Type: AWS::Serverless::SimpleTable
