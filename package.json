@@ -28,7 +28,6 @@
   "homepage": "https://github.com/evanchiu/serverless-todo#readme",
   "devDependencies": {},
   "dependencies": {
-    "mime-types": "^2.1.19",
-    "rookout": "^0.1.22"
+    "mime-types": "^2.1.19"
   }
 }
